@@ -1,14 +1,14 @@
 <!-- MENU SIDEBAR-->
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
-        <a href="#">
+        <a href="index.php">
             <img src="images/icon/rocket.png" alt="CKE" />
         </a>
     </div>
     <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
-                <li class="active has-sub">
+                <li>
                     <a class="js-arrow" href="#">
                         <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
@@ -26,9 +26,9 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="chart.html">
-                        <i class="fas fa-chart-bar"></i>Charts</a>
+                <li  class="active has-sub">
+                    <a href="copy_add.php">
+                        <i class="fas fa-chart-bar"></i>Add Copy</a>
                 </li>
                 <li>
                     <a href="table.html">
