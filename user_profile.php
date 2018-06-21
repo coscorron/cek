@@ -59,6 +59,14 @@
                                               <option value="3">Viewer</option>
                                           </select>
                                       </div>
+                                      <div class="form-group">
+                                        <label for="select" class=" form-control-label">ENABLED</label>
+                                        <label class="switch switch-text switch-primary switch-pill">
+                                          <input type="checkbox" class="switch-input" checked="true" >
+                                          <span data-on="On" data-off="Off" class="switch-label"></span>
+                                          <span class="switch-handle"></span>
+                                        </label>
+                                      </div>
                                   </div>
                                       <div class="row">
                                       <div class="col-lg-4">
@@ -98,6 +106,9 @@
                                     <button type="submit" class="btn btn-primary btn-sm">
                                         <i class="fa fa-dot-circle-o"></i> Submit
                                     </button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="location.href='user_list.php'">
+                                        <i class="fa fa-chevron-left"></i> Back
+                                    </button>                                    
                                     <button type="reset" class="btn btn-danger btn-sm">
                                         <i class="fa fa-ban"></i> Cancel
                                     </button>

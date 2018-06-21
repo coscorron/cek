@@ -43,6 +43,16 @@
                                   <div class="card-body card-block">
                                     <form action="" method="post" novalidate="novalidate">
                                       <div class="form-group">
+                                        <label for="txtFROM" class=" form-control-label">CLIENT</label>
+                                        <select name="select" id="select" class="form-control" >
+                                            <option value="2">BANK A</option>
+                                            <option value="2">BANK B</option>
+                                            <option value="0">BANK C</option>
+                                            <option value="1">BANK D</option>
+                                            <option value="3">BANK E</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
                                           <label for="txtACTION" class=" form-control-label">ACTION</label>
                                           <input type="text" id="txtACTION" name="txtACTION" placeholder="Enter the description of the action" class="form-control">
                                       </div>

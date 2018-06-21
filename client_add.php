@@ -39,12 +39,12 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="card">
-                        <div class="card-header">CLIENT PROFILE</div>
+                        <div class="card-header">NEW CLIENT</div>
                           <div class="card-body card-block">
                             <form action="" method="post" novalidate="novalidate">
                               <div class="form-group">
                                 <label for="txtClient" class=" form-control-label">CLIENT</label>
-                                <input type="text" id="txtClient" name="txtClient" placeholder="Enter the description of the action" class="form-control" value="Bank of Q">
+                                <input type="text" id="txtClient" name="txtClient" placeholder="Enter the description of the action" class="form-control" value="">
                               </div>
                             </form>
                           </div>
@@ -69,10 +69,6 @@
                               <div class="card-body text-secondary">
                                 <label for="txtFROM" class=" form-control-label">Environment</label>
                                 <select name="select" id="select" class="form-control" multiple="">
-                                  <option value="2">PROD</option>
-                                  <option value="0">UAT1</option>
-                                  <option value="1">UAT2</option>
-                                  <option value="3">QA</option>
                                 </select>
                               </div>
                             </div>
@@ -88,36 +84,6 @@
                                       <th>In Experian</th>
                                     </tr>
                                   </thead>
-                                  <tbody>
-                                    <tr>
-                                        <td>Transac</td>
-                                        <td>1.4.1</td>
-                                        <td>PROD</td>
-                                        <td>15/05/2018</td>
-                                        <td class="text-center"><input name="check1" class="form-check-input" id="check1" type="checkbox"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Transac</td>
-                                        <td>2.1</td>
-                                        <td>UAT</td>
-                                        <td>14/06/2018</td>
-                                        <td class="text-center"><input name="check1" class="form-check-input" id="check1" type="checkbox"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>POC</td>
-                                        <td>41</td>
-                                        <td>QA</td>
-                                        <td>01/01/2018</td>
-                                        <td class="text-center"><input name="check1" class="form-check-input" id="check1" type="checkbox" checked></td>
-                                    </tr>
-                                    <tr>
-                                        <td>POC</td>
-                                        <td>38</td>
-                                        <td>UAT2</td>
-                                        <td>03/12/2017</td>
-                                        <td class="text-center"><input name="check1" class="form-check-input" id="check1" type="checkbox" checked></td>
-                                    </tr>
-                                  </tbody>
                                 </table>
                               </div>
                             </div>
@@ -127,12 +93,13 @@
                                     <button type="submit" class="btn btn-primary btn-sm">
                                         <i class="fa fa-dot-circle-o"></i> Submit
                                     </button>
-                                    <button type="button" class="btn btn-primary btn-sm" onclick="location.href='client_list.php'">
-                                        <i class="fa fa-chevron-left"></i> Back
-                                    </button>
+                                      <button type="button" class="btn btn-primary btn-sm" onclick="location.href='client_list.php'">
+                                          <i class="fa fa-chevron-left"></i> Back
+                                      </button>
                                     <button type="reset" class="btn btn-danger btn-sm">
                                         <i class="fa fa-ban"></i> Cancel
                                     </button>
+
                                 </div>
                               </div>
                           </div>

@@ -58,7 +58,7 @@
                                           </button>
                                           <div class="col-md-12">
                                             <div class="table-responsive m-b-40">
-                                                <table class="table table-borderless table-data3">
+                                                <table class="table table-borderless ">
                                                     <thead>
                                                         <tr>
                                                             <th>VERB</th>
@@ -111,7 +111,7 @@
                                           </button>
                                           <div class="col-md-12">
                                             <div class="table-responsive m-b-40">
-                                                <table class="table table-borderless table-data3">
+                                                <table class="table table-borderless">
                                                     <thead>
                                                         <tr>
                                                             <th>VERB</th>
