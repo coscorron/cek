@@ -4,6 +4,10 @@
 <head>
   <?php
     include("referencia.php");
+    include("connection_db.php");
+    include("WS_user.php");
+
+    $txtError = isset($_POST['txtError']) ? $_POST['txtError'] : '';
   ?>
     <!-- Title Page-->
     <title>User</title>
@@ -39,7 +43,7 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="card">
-                        <div class="card-header">USER LIST</div>
+                        <div class="card-header">USER LIST <?php  echo $txtError; ?></div>
                           <div class="row">
                             <div class="col-lg-12">
                               <div class="table-responsive table--no-card m-b-20">
@@ -55,75 +59,21 @@
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                        <td>user1@xyz.com</td>
-                                        <td>Xxxx Yyyy</td>
-                                        <td>ANALYST</td>
-                                        <td><span class="badge badge-success">Enabled</span></td>
-                                        <td class="text-center">
-                                          <button type="submit" class="btn btn-primary btn-sm">
-                                              <i class="fa fa-edit"></i> Edit
-                                          </button>
-                                          <button type="reset" class="btn btn-danger btn-sm">
-                                              <i class="fa fa-ban"></i> Remove
-                                          </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>user1@xyz.com</td>
-                                        <td>Xxxx Yyyy</td>
-                                        <td>ANALYST</td>
-                                        <td><span class="badge badge-success">Enabled</span></td>
-                                        <td class="text-center">
-                                          <button type="submit" class="btn btn-primary btn-sm">
-                                              <i class="fa fa-edit"></i> Edit
-                                          </button>
-                                          <button type="reset" class="btn btn-danger btn-sm">
-                                              <i class="fa fa-ban"></i> Remove
-                                          </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>user1@xyz.com</td>
-                                        <td>Xxxx Yyyy</td>
-                                        <td>ANALYST</td>
-                                        <td><span class="badge badge-success">Enabled</span></td>
-                                        <td class="text-center">
-                                          <button type="submit" class="btn btn-primary btn-sm">
-                                              <i class="fa fa-edit"></i> Edit
-                                          </button>
-                                          <button type="reset" class="btn btn-danger btn-sm">
-                                              <i class="fa fa-ban"></i> Remove
-                                          </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>user1@xyz.com</td>
-                                        <td>Xxxx Yyyy</td>
-                                        <td>ANALYST</td>
-                                        <td><span class="badge badge-success">Enabled</span></td>
-                                        <td class="text-center">
-                                          <button type="submit" class="btn btn-primary btn-sm">
-                                              <i class="fa fa-edit"></i> Edit
-                                          </button>
-                                          <button type="reset" class="btn btn-danger btn-sm">
-                                              <i class="fa fa-ban"></i> Remove
-                                          </button>
-                                        </td>
-                                    </tr>
+                                    <?php getUserList($conn); ?>
                                   </tbody>
                                 </table>
                               </form>
                               </div>
                             </div>
                           </div>
+                          <form action="user_add.php">
+                              <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-plus-square"></i>&nbsp; Add user</button>
+                            </div>
+                          </form>
                         </div>
-                              <form action="user_add.php">
-                                  <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-plus-square"></i>&nbsp; Add user</button>
-                                </div>
-                              </form>
+
                               </div>
                           </div>
                         </div>

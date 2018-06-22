@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <?php
     include("referencia.php");
     include("connection_db.php");
     include("WS_perfil.php");
+
+    $txtUser = isset($_POST['txtUser']) ? $_POST['txtUser'] : '';
+    $txtNombre = isset($_POST['txtNombre']) ? $_POST['txtNombre'] : '';
+    $txtPass = isset($_POST['txtPass']) ? $_POST['txtPass'] : '';
+    $txtError = isset($_POST['txtError']) ? $_POST['txtError'] : '';
+    $slcProfile = isset($_POST['slcProfile']) ? $_POST['slcProfile'] : '';
+    echo "se recibio: " . $slcProfile;
+
   ?>
     <!-- Title Page-->
     <title>User Profile</title>
@@ -21,7 +28,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            <form class="form-header" action="" method="POST">
+                            <form class="form-header" action="user_insert.php" method="POST">
                                 <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
@@ -40,16 +47,16 @@
                     <div class="container-fluid">
                         <div class="row">
                           <div class="col-lg-12">
-                          <form name="form1" id="form1" method="post" action="WS_perfil.php" >
+                          <form name="form1" id="form1" method="post" action="user_insert.php" >
                               <div class="card">
-                                  <div class="card-header">NEW USER</div>
+                                  <div class="card-header">NEW USER <?php echo "     ".$txtError; ?></div>
                                   <div class="card-body card-block">
                                     <div class="row form-group">
                                         <div class="col col-md-3">
                                             <label for="txtUser" class=" form-control-label">EMAIL</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="email" id="txtUser" name="txtUser" placeholder="Enter the mail" class="input-sm form-control-sm form-control" value="" required maxlength="50">
+                                            <input type="email" id="txtUser" name="txtUser" placeholder="Enter the mail" class="input-sm form-control-sm form-control" value="<?php echo $txtUser; ?>" required maxlength="50">
                                         </div>
                                     </div>
                                     <div class="row form-group">
@@ -57,7 +64,7 @@
                                             <label for="txtUser" class=" form-control-label">NAME</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="text" id="txtNombre" name="txtNombre" placeholder="Enter the name" class="input-sm form-control-sm form-control" value="" required maxlength="100">
+                                            <input type="text" id="txtNombre" name="txtNombre" placeholder="Enter the name" class="input-sm form-control-sm form-control" value="<?php echo $txtNombre; ?>" required maxlength="100">
                                         </div>
                                     </div>
                                     <div class="row form-group">
@@ -82,7 +89,7 @@
                                         </div>
                                         <div class="col-12 col-md-9">
                                           <label class="switch switch-text switch-primary switch-pill">
-                                            <input type="checkbox" class="switch-input" checked="true" >
+                                            <input type="checkbox" id="chkEnabled" name="chkEnabled" class="switch-input" checked="true" >
                                             <span data-on="On" data-off="Off" class="switch-label"></span>
                                             <span class="switch-handle"></span>
                                           </label>
@@ -93,7 +100,7 @@
                                           <label for="select" class="form-control-label">PROFILE</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                          <select name="slcProfile" id="slcProfile"  required><?php getPerfil($conn, 0); ?></select>
+                                          <select name="slcProfile" id="slcProfile"  required><?php getPerfil($conn, trim($slcProfile)); ?></select>
                                       </div>
                                     </div>
                                     <div class="row">

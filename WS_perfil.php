@@ -5,7 +5,7 @@ function getPerfil($conn,$selected){
   if (!$rs)
     {exit("Error");}
 
-    echo "<option $select value=''>Seleccionar</option>";
+    echo "<option value=''>Seleccionar</option>";
     while (odbc_fetch_row($rs)) {
       $idPerfil=odbc_result($rs,"idPerfil");
       $nombrePerfil = odbc_result($rs,"nombre");
@@ -14,7 +14,7 @@ function getPerfil($conn,$selected){
       } else {
         $select = " ";
       }
-      echo "<option $selected  $idPerfil value='$idPerfil'>$nombrePerfil</option>";
+      echo "<option $select  value='$idPerfil'>$nombrePerfil</option>";
     }
 }
  ?>
