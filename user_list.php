@@ -11,6 +11,18 @@
   ?>
     <!-- Title Page-->
     <title>User</title>
+    <script>
+      function editar(user){
+        form2.txtUserEdit.value = user;
+        form2.submit();
+      }
+      function Remove(user){
+        form3.txtUser.value = user;
+      }
+      function Delete(){
+        form3.submit();
+      }
+    </script>
 </head>
 <body class="animsition">
     <div class="page-wrapper">
@@ -47,7 +59,11 @@
                           <div class="row">
                             <div class="col-lg-12">
                               <div class="table-responsive table--no-card m-b-20">
-                                <form action="user_profile.php">
+                                <form name="form3" id="form3" method="post" action="user_remove.php">
+                                  <input type="hidden" id="txtUser" name="txtUser" value="">
+                                </form>
+                                <form action="user_profile.php" name="form2" id="form2" method="POST">
+                                  <input type="hidden" name="txtUserEdit" id="txtUserEdit" value="">
                                 <table class="table table-borderless table-striped">
                                   <thead>
                                     <tr>
@@ -90,6 +106,29 @@
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
         </div>
+        <!-- modal small -->
+  			<div class="modal fade" id="smallmodal" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+  				<div class="modal-dialog modal-sm" role="document">
+  					<div class="modal-content">
+  						<div class="modal-header">
+  							<h5 class="modal-title" id="smallmodalLabel">Warning!</h5>
+  							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  								<span aria-hidden="true">&times;</span>
+  							</button>
+  						</div>
+  						<div class="modal-body">
+  							<p>
+  								confirms the user's deletion?
+  							</p>
+  						</div>
+  						<div class="modal-footer">
+  							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+  							<button type="button" class="btn btn-primary" onclick="Delete();">Confirm</button>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<!-- end modal small -->
 
     </div>
 
