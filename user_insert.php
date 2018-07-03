@@ -7,7 +7,7 @@ $txtUser = isset($_POST['txtUser']) ? $_POST['txtUser'] : '';
 $txtNombre = isset($_POST['txtNombre']) ? $_POST['txtNombre'] : '';
 $txtPass = isset($_POST['txtPass']) ? $_POST['txtPass'] : '';
 $chkEnabled = isset($_POST['chkEnabled']) ? $_POST['chkEnabled'] : '';
-$slcProfile = isset($_POST['slcProfile']) ? $_POST['slcProfile'] : '';
+$slcProfile = isset($_POST['slcProfile']) ? $_POST['slcProfile'] : ''; 
 
 if ($chkEnabled == 'on'){
   $chkEnabled = 1;
